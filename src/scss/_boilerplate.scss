@@ -1,0 +1,49 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--main-text);
+}
+
+a,
+a:visited,
+a:link {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: var(--body-font);
+}
+
+h1 {
+    font-family: var(--logo-font);
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h2,
+h3 {
+    font-family: var(--heading-font);
+}
+
+ul {
+    list-style-type: none;
+}

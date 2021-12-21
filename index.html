@@ -4,12 +4,136 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Town Nail Salon</title>
 
-    <link rel="stylesheet" href="src/style.css" />
-    <script src="src/script.js" defer></script>
+    <title>Town Nails & Spa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Montserrat:wght@300&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/dist/style.min.css" />
+
+    <script src="/src/script.js" defer></script>
 </head>
 <body>
-    
+    <header>
+        <a href="#top"><h1>Town Nails & Spa</h1></a>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#hours">Hours</a>
+            <a href="#reviews">Reviews</a>
+            <a href="" class="button">Book Appointment!</a>
+        </nav>
+    </header>
+    <main>
+        <section id="hero-section" class="parallax">
+            <div class="container">
+                <h1>Newly Renovated &<br>Under New Management</h1>
+                <p>Town Nail Slaon was originally opened over 10 years ago and quickly became a local favorite. With new management, the salon has been fully redesigned, renovated, and is now offering more organic and upgraded services.</p>
+                <button class="button large-button">CALL TO BOOK APPOINTMENT</button>
+            </div>
+        </section>
+        <div class="flex-container main-background">
+            <h2>Services</h2>
+            <section id="services">
+                <div class="services__nails">
+                    <h3>Nail Care</h3>
+                    <ul>
+                        <li><span class="float-left">Full Set:</span><span class="float-right">$35 and up</span></li><br>
+                        <li><span class="float-left">Fill:</span><span class="float-right">$30</span></li><br>
+                        <li><span class="float-left">Full Set Pink & White:</span><span class="float-right">$60</span></li><br>
+                        <li><span class="float-left">Fill Pink & White:</span><span class="float-right">$45</span></li><br>
+                        <li><span class="float-left">Fill Pink:</span><span class="float-right">$35</span></li><br>
+                        <li><span class="float-left">Full Set UV Gel:</span><span class="float-right">$45 and up</span></li><br>
+                        <li><span class="float-left">Fill UV Gel:</span><span class="float-right">$35</span></li><br>
+                        <li><span class="float-left">Cut Down:</span><span class="float-right">$5</span></li><br>
+                        <li><span class="float-left">Shellac:</span><span class="float-right">$25</span></li><br>
+                        <li><span class="float-left">Manicure:</span><span class="float-right">$20</span></li><br>
+                        <li><span class="float-left">Dip Powder:</span><span class="float-right">$45</span></li><br>
+                        <li><span class="float-left">Mani & Spa Pedi:</span><span class="float-right">$60</span></li><br>
+                    </ul>
+                </div>
+                <div class="services__waxing">
+                    <h3>Waxing</h3>
+                    <ul>
+                        <li><span class="float-left">Eye Brows:</span><span class="float-right">$10</span></li><br>
+                        <li><span class="float-left">Lip:</span><span class="float-right">$8</span></li><br>
+                        <li><span class="float-left">Chin:</span><span class="float-right">$10</span></li><br>
+                        <li><span class="float-left">Under Arm:</span><span class="float-right">$20</span></li><br>
+                        <li><span class="float-left">Full Arm:</span><span class="float-right">$35</span></li><br>
+                        <li><span class="float-left">Half Arm:</span><span class="float-right">$25</span></li><br>
+                        <li><span class="float-left">Bikini:</span><span class="float-right">$35 and up</span></li><br>
+                        <li><span class="float-left">Brazilian Bikini:</span><span class="float-right">$50</span></li><br>
+                        <li><span class="float-left">Full Legs:</span><span class="float-right">$50</span></li><br>
+                        <li><span class="float-left">Half Legs:</span><span class="float-right">$30</span></li><br>
+                        <li><span class="float-left">Full Face:</span><span class="float-right">$35</span></li><br>
+                        <li><span class="float-left">Back:</span><span class="float-right">$50</span></li><br>
+                    </ul>
+                </div>
+                <div class="services__skin">
+                    <h3>Skin Care</h3>
+                    <ul>
+                        <li><span class="float-left">Mini European Facial:</span><span class="float-right">$50</span></li><br>
+                        <li><span class="float-left">Facial Treatement Anti-Aging Vitamin E:</span><span class="float-right">$70</span></li><br>
+                        <li><span class="float-left">Eyebrow Tint:</span><span class="float-right">$20</span></li><br>
+                        <li><span class="float-left">Eye Lash Extension:</span><span class="float-right">$80</span></li><br>
+                        <li><span class="float-left">Eye Lash Fill In:</span><span class="float-right">$40 and up</span></li><br>
+                    </ul>
+                </div>
+                <div class="services__massage">
+                    <h3>Massage</h3>
+                    <ul>
+                        <li><span class="float-left">Fantasy Hot Stone Massage 1 Hour:</span><span class="float-right">$85</span></li><br>
+                        <li><span class="float-left">Fantasy Hot Stone Massage 1/2 Hour:</span><span class="float-right">$50</span></li><br>
+                        <li><span class="float-left">Massage Therapy 1 Hour:</span><span class="float-right">$75</span></li><br>
+                        <li><span class="float-left">Massage Therapy 1/2 Hour:</span><span class="float-right">$45</span></li><br>
+                        <li><span class="float-left">Shoulder Back & Neck 15 Min:</span><span class="float-right">$30</span></li><br>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <div class="flex-container main-background marble-parallax">
+            <h2>Hours of Operation</h2>
+            <section id="hours"> 
+                <ul>
+                    <li><span class="float-left">Monday:</span><span class="float-right">9AM-7PM</span></li><br>
+                    <li><span class="float-left">Tuesday:</span><span class="float-right">Closed</span></li><br>
+                    <li><span class="float-left">Wednesday:</span><span class="float-right">9AM-7PM</span></li><br>
+                    <li><span class="float-left">Thursday:</span><span class="float-right">9AM-7PM</span></li><br>
+                    <li><span class="float-left">Friday:</span><span class="float-right">9AM-7PM</span></li><br>
+                    <li><span class="float-left">Saturday:</span><span class="float-right">9AM-7PM</span></li><br>
+                    <li><span class="float-left">Sunday:</span><span class="float-right">11AM-4PM</span></li><br>
+                </ul>
+                <ul class="benefits">
+                    <li><span class="bold">Walk-Ins Welcome</span></li>
+                    <li>Highest level of professionalism</li>
+                    <li>Hundreds of polishes to choose from</li>
+                    <li>English speaking and licensed employees</li>
+                    <li>High quality organic products</li>
+                    <li>Family, female, and minority owned</li>
+                </ul>
+            </section>
+        </div>
+        <div class="flex-container main-background">
+            <section id="reviews">
+                <h2>What the Locals Say</h2>
+                <div class="review-card">
+                    <p>"This place is amazing. Been going here for a few months now and the staff is so friendly and I always love the finished product."</p>
+                    <p>- Jorden Armstrong</p>
+                </div>
+                <div class="review-card">
+                    <p>"HAPPY COSTUMER.
+                        The place was pretty clean and the ladies were all very nice! My gel polish look every good too. I am definitely coming back!!"</p>
+                    <p>- Hannah Kauffman</p>
+                </div>
+                <div class="review-card">
+                    <p>"Friendly and professional staff, excellent technique and final results. I have been going there since they first opened 😊"</p>
+                    <p>- Deborah Stubing</p>
+                </div>
+            </section>
+        </div>
+        <footer>
+
+        </footer>
+    </main>
 </body>
 </html>
