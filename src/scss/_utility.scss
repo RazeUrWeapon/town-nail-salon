@@ -19,7 +19,7 @@
 .flex-container {
     padding: 30px 0 50px;
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     justify-content: center;
 
     h2 {
@@ -38,20 +38,16 @@
 }
 
 .button:hover {
-    color: var(--main-text);
+    color: var(--dark);
     background-color: var(--main-bg);
 }
 
 .large-button {
     position: relative;
     padding: 20px 50px 20px;
-    font-size: 16px;
+    font-size: rem(18);
     cursor: pointer;
     transition: 200ms ease-in-out;
-}
-
-.bold {
-    font-weight: 700;
 }
 
 .float-left {
@@ -90,6 +86,7 @@
 
 .parallax {
     position: relative;
+    background-color: var(--main-bg);
 }
 
 .parallax::before {
