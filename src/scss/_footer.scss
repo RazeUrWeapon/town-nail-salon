@@ -50,9 +50,11 @@
             justify-self: center;
             font-size: rem(18);
 
-            .phone-number {
-                color: $light !important;
-            }
+            a {
+                .phone-number {
+                    color: $light;
+                }
+            }   
 
             @include breakpoint-up(medium) {
                 grid-column: 1 / 2;
