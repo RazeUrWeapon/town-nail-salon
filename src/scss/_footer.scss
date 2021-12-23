@@ -51,9 +51,7 @@
             font-size: rem(18);
 
             a {
-                .phone-number {
-                    color: $light;
-                }
+                color: $light;
             }   
 
             @include breakpoint-up(medium) {
