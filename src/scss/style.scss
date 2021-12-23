@@ -9,3 +9,17 @@
 @import 'hours';
 @import 'reviews';
 @import 'footer';
+
+.button {
+    position: relative;
+    padding: 10px;
+    background-image: linear-gradient(to right, $accentOne, $accentTwo);
+    border: 2px solid transparent;
+    transition: all 200ms ease-in-out;
+}
+
+.button:hover {
+    border: 2px solid $accentOne;
+    background-image: linear-gradient(to right, transparent, transparent);
+    box-shadow: 1px 1px 8px $accentOne;
+}

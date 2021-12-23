@@ -19,10 +19,11 @@ a,
 a:visited,
 a:link {
     text-decoration: none;
-    color: inherit;
+    color: $dark;
 }
 
 body {
+    padding-top: rem(37);
     font-family: $bodyFont;
     color: $dark;
 
@@ -32,6 +33,7 @@ body {
 }
 
 h1 {
+    position: relative;
     font-family: $logoFont;
 }
 
@@ -56,6 +58,7 @@ h3 {
 
 h2,
 h3 {
+    position: relative;
     font-family: $headingFont;
 }
 
@@ -64,18 +67,6 @@ ul {
 }
 
 // Helper Classes
-.button {
-    padding: 10px;
-    background-image: linear-gradient(to right, $accentOne, $accentTwo);
-    border: 2px solid transparent;
-    transform: scale(1);
-}
-
-.button:hover {
-    color: $dark !important;
-    transform: scale(1.02);
-    transition: ease-in-out 200ms;
-}
 
 // Floats for menu and hours
 .float-left {
@@ -91,7 +82,7 @@ ul {
 .parallax {
     position: relative;
     background-color: $light;
-
+    z-index: 1;
 }
 
 .parallax::before {
@@ -101,15 +92,16 @@ ul {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background: url('../images/chairs.jpg') no-repeat center;
+    background: url('../../images/chairs.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
-    opacity: 0.125;
+    opacity: 0.15;
 }
 
 .marble-parallax {
     position: relative;
     background-color: $light;
+    z-index: 1;
 }
 
 .marble-parallax::before {
@@ -119,8 +111,8 @@ ul {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background: url('../images/marble-bg.jpg') no-repeat top;
+    background: url('../../images/marble-bg.jpg') no-repeat top;
     background-size: cover;
     background-attachment: fixed;
-    opacity: 0.2;
+    opacity: 0.3;
 }

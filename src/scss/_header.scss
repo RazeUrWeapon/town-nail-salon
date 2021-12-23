@@ -1,9 +1,15 @@
 .header { 
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    z-index: 4;
 
     nav {
-        position: relative;
+        position: sticky;
+        top: 0;
         padding: rem(15) rem(20) rem(15) rem(10);
-        z-index: 1;
+        z-index: 2;
         background-color: $light;
     }
 
@@ -23,7 +29,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
+    }position: fixed;
+    top: 0;
     
     &__toggle { // Hamburger menu line styling
 
@@ -65,6 +72,8 @@
         bottom: 0px;
         left: 0px;
         background-image: linear-gradient($light 66%, transparent 100%);
+        z-index: 2;
+        color: white;
     }
 
     &__menu {
@@ -72,14 +81,14 @@
         margin-top: rem(28);
         left: 50%;
         transform: translateX(-50%);
+        z-index: 2;
 
         a {
             display: block;
             padding: 0.625rem;
             font-size: rem(24);
             text-align: center;
-            color: $accentOne;
-
+            color: $dark;
         }
     }
 
@@ -96,6 +105,10 @@
             transition: 200ms ease-in-out;
         }
 
+        .button:hover {
+            color: $dark;
+        }
+        
         display: none;
 
         @include breakpoint-up(large) {

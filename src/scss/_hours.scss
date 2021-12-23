@@ -6,6 +6,9 @@
     flex-wrap: wrap;
 
     .hours {
+        li {
+            position: relative;
+        }
 
         @include breakpoint-up(medium) {
             display: flex;

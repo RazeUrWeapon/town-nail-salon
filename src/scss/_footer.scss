@@ -21,7 +21,7 @@
         }
 
         &__cta { 
-            margin: rem(20) 0;
+            margin: rem(20) 0 rem(40);
             justify-self: center;
 
             @include breakpoint-up(medium) {
@@ -35,11 +35,20 @@
                 justify-self: start;
                 font-size: rem(23);
             }
+
+            .button {
+                padding: rem(20);
+            }
+
+            .button:hover {
+                color: $light;
+            }
         }
 
         &__information {
-            margin-bottom: rem(10);
+            margin-bottom: rem(20);
             justify-self: center;
+            font-size: rem(18);
 
             @include breakpoint-up(medium) {
                 grid-column: 1 / 2;
@@ -71,6 +80,8 @@
         .copyright {
             justify-self: center;
             align-self: end;
+            font-size: rem(14);
+            font-style: italic;
 
             @include breakpoint-up(medium) {
                 grid-column: 1 / 4;
