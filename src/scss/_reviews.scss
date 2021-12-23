@@ -1,0 +1,51 @@
+#reviews {
+    padding: rem(30) rem(10) rem(50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .reviews {
+        max-width: rem(1080);
+
+        @include breakpoint-up(medium) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: rem(10);
+        }
+
+        &__card {
+            margin: 0 auto rem(20);
+            padding: rem(20);
+            width: 85%;
+            flex: 1 1 auto;
+            align-self: flex-start;
+            background-image: linear-gradient(to top right, $accentOne, $accentTwo);
+            border-radius: rem(5);
+            box-shadow: 2px 2px 5px $dark;
+            font-size: rem(18);
+
+            @include breakpoint-up(medium) {
+                width: auto;
+            }
+
+            img {
+                width: rem(50);
+                margin-bottom: rem(10);
+                opacity: 0.9;
+            }
+
+            .testimonial {
+                margin-bottom: rem(20);
+                font-style: italic;
+            }
+
+            .customer-name {
+                font-weight: 700;
+                color: $light;
+                opacity: 0.9;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+#hours {
+    padding: rem(30) rem(10) rem(50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .hours {
+
+        @include breakpoint-up(medium) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: rem(30);
+        }
+
+        &__open {
+            margin: 0 rem(40) rem(20);
+            font-size: rem(18);
+            
+            @include breakpoint-up(medium) {
+                margin: 0 rem(10);
+                flex: 1 0 40%;
+                align-self: flex-start;
+                font-size: rem(20);
+            }
+
+            @include breakpoint-up(large) {
+                font-size: rem(22);
+            }
+        }
+
+        &__benefits {
+            font-size: rem(18);
+            list-style-type: disc;
+
+            @include breakpoint-up(medium) {
+                align-self: flex-start;
+                flex: 1 0 auto;
+                font-size: rem(20);
+            }
+            
+            @include breakpoint-up(large) {
+                font-size: rem(22);
+            }
+
+            span {
+                font-weight: 700;
+            }
+        }
+
+    }
+}

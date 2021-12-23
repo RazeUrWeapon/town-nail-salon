@@ -1,0 +1,111 @@
+.header { 
+
+    nav {
+        position: relative;
+        padding: rem(15) rem(20) rem(15) rem(10);
+        z-index: 1;
+        background-color: $light;
+    }
+
+    h1 {
+        font-size: rem(30);
+
+        @include breakpoint-up(medium) {
+            font-size: rem(35);
+        }
+
+        @include breakpoint-up(large) {
+            font-size: rem(40);
+        }
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    &__toggle { // Hamburger menu line styling
+
+        > span {
+            display: block;
+            width: rem(26);
+            height: rem(2);
+            background-color: $dark;
+            transition: all 300ms ease-in-out;
+            transform-origin: 0.188rem 0.063rem;
+
+            &:not(:last-child) {
+                margin-bottom: rem(5);
+            }
+        }
+    }
+
+    &.open { // Hamburger animation
+        .header__toggle {
+            > span:first-child {
+                transform: rotate(45deg);
+            }
+        
+            >span:nth-child(2) {
+                opacity: 0;
+            }
+        
+            > span:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    .overlay {
+        opacity: 0;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-image: linear-gradient($light 66%, transparent 100%);
+    }
+
+    &__menu {
+        position: absolute;
+        margin-top: rem(28);
+        left: 50%;
+        transform: translateX(-50%);
+
+        a {
+            display: block;
+            padding: 0.625rem;
+            font-size: rem(24);
+            text-align: center;
+            color: $accentOne;
+
+        }
+    }
+
+    &__desktop {
+        align-items: center;
+
+        a {
+            margin: 0 rem(10);
+            font-size: rem(22);
+        }
+
+        a:hover {
+            color: $accentOne;
+            transition: 200ms ease-in-out;
+        }
+
+        display: none;
+
+        @include breakpoint-up(large) {
+            display: flex;
+        }
+    }
+
+    #hamburgerButton {
+        @include breakpoint-up(large) {
+            display: none;
+        }
+    }
+}

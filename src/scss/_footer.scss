@@ -1,0 +1,81 @@
+#footer {
+    margin: auto;
+    padding: rem(20);
+    background-color: $dark;
+    color: $light;
+
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, fit-content(auto));
+        
+        @include breakpoint-up(medium) {
+            grid-template-columns: 1fr rem(175) 1fr;
+            grid-template-rows: repeat(2, fit-content(auto));
+            grid-column-gap: rem(5);
+        }
+
+        @include breakpoint-up(large) {
+            grid-template-columns: 1fr rem(250) 1fr;
+            grid-column-gap: rem(50);
+        }
+
+        &__cta { 
+            margin: rem(20) 0;
+            justify-self: center;
+
+            @include breakpoint-up(medium) {
+                grid-column: 3 / 4;
+                gird-row: 1 / 2;
+                font-size: rem(18);
+                white-space: nowrap;
+            }
+
+            @include breakpoint-up(large) {
+                justify-self: start;
+                font-size: rem(23);
+            }
+        }
+
+        &__information {
+            margin-bottom: rem(10);
+            justify-self: center;
+
+            @include breakpoint-up(medium) {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+                font-size: rem(20);
+            }
+
+            @include breakpoint-up(large) {
+                justify-self: end;
+            }
+        }
+
+        &__hours {
+            width: rem(175);
+            margin-bottom: rem(10);
+            justify-self: center;
+
+            @include breakpoint-up(medium) {
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+            }
+
+            @include breakpoint-up(large) {
+                width: rem(250);
+                font-size: rem(20);
+            }
+        }
+
+        .copyright {
+            justify-self: center;
+            align-self: end;
+
+            @include breakpoint-up(medium) {
+                grid-column: 1 / 4;
+                grid-row: 2 / 3;
+            }
+        }
+    }
+}

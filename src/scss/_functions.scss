@@ -3,3 +3,12 @@
 @function rem($pixels, $context: 16) {
     @return #{$pixels/$context}rem;
 }
+
+// Breakpoints up @ 640px, 1024px, 1400px
+$breakpoints-up: ('medium': '40em', 'large': '64em', 'xlarge': '87.5');
+
+@mixin breakpoint-up($size) {
+    @media (min-width: map-get($breakpoints-up, $size)) {
+        @content;
+    }
+}

@@ -16,30 +16,44 @@
     <script src="/src/js/script.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#"><h1>Town Nails & Spa</h1></a>
-            <div class="openMenu"><i class="fas fa-bars"></i></div>
-            <ul class="mainMenu">
-                <li><a href="#services-scroll" class="servicesButton">Services</a></li>
-                <li><a href="#hours-scroll" class="hoursButton">Hours</a></li>
-                <li><a href="#reviews-scroll" class="reviewsButton">Reviews</a>
-                <li><a href="tel:4108368868" class="button"><i class="fa fa-phone"></i> (410) 836-8868</a></li>
-                <div class="closeMenu"><i class="fas fa-times"></i></div>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="hero-section" class="parallax">
-            <div class="container">
-                <h1>Newly Renovated &<br>Under New Management</h1>
-                <p>Town Nail Slaon was originally opened over 10 years ago and quickly became a local favorite. With new management, the salon has been fully redesigned, renovated, and is now offering more organic and upgraded services.</p>
-                <a href="tel:4108368868" class="button large-button">CALL TO BOOK APPOINTMENT</a>
+    <header class="header">
+        <div class="overlay has-fade"></div>
+        <nav class="header__nav">
+            <h1>Town Nails & Spa</h1>
+
+            <a id="hamburgerButton" href="#" class="header__toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="header__desktop">
+                <a href="#services" class="servicesButton">Services</a>
+                <a href="#hours" class="hoursButton">Hours</a>
+                <a href="#reviews" class="reviewsButton">Reviews</a>
+                <a href="tel:4108368868" class="button"><i class="fa fa-phone"></i> (410) 836-8868</a>
             </div>
+        </nav>
+
+            <!-- Mobile Menu -->
+            <div class="header__menu has-fade">
+                <a href="#top">Home</a>
+                <a href="#services">Services</a>
+                <a href="#hours">Hours</a>
+                <a href="#reviews">Reviews</a>
+                <a href="https://www.facebook.com/pages/category/Nail-Salon/Town-Nails-Spa-141054785911981/"><i class="fa fa-facebook"></i></a>
+            </div>
+    </header>
+    <main class="">
+        <section id="hero" class="hero">
+                <h1>Newly Renovated & Under New Management</h1>
+                <p>The salon has been fully redesigned, renovated, and is now offering more organic and upgraded services.</p>
+                <a href="tel:4108368868" class="button button-large">CALL NOW TO BOOK</a>
         </section>
-        <div id="services-scroll" class="flex-container main-background">
+        <section id="services">
             <h2>Services</h2>
-            <section id="services">
+            <div class="services">
                 <div class="services__nails">
                     <h3>Nail Care</h3>
                     <ul>
@@ -96,9 +110,9 @@
                 </div>
             </section>
         </div>
-        <div id="hours-scroll" class="flex-container main-background marble-parallax">
+        <section id="hours" class="">
             <h2>Hours of Operation</h2>
-            <section id="hours"> 
+            <div class="hours"> 
                 <ul class="hours__open">
                     <li><span class="float-left">Monday:</span><span class="float-right">9AM-7PM</span></li><br>
                     <li><span class="float-left">Tuesday:</span><span class="float-right">Closed</span></li><br>
@@ -108,7 +122,7 @@
                     <li><span class="float-left">Saturday:</span><span class="float-right">9AM-7PM</span></li><br>
                     <li><span class="float-left">Sunday:</span><span class="float-right">11AM-4PM</span></li><br>
                 </ul>
-                <ul class="benefits">
+                <ul class="hours__benefits">
                     <li><span>Walk-Ins Welcome</span></li>
                     <li>Highest level of professionalism</li>
                     <li>Hundreds of polishes to choose from</li>
@@ -116,11 +130,11 @@
                     <li>High quality organic products</li>
                     <li>Family, female, and minority owned</li>
                 </ul>
-            </section>
-        </div>
-        <div id="reviews-scroll" class="flex-container main-background marble-parallax">
+            </div>
+        </section>
+        <section id="reviews" class="">
             <h2>What the Locals Say</h2>
-            <section id="reviews">
+            <div class="reviews">
                 <div class="reviews__card">
                     <img src="images/quote-icon.svg">
                     <p class="testimonial">This place is amazing. Been going here for a few months now and the staff is so friendly and I always love the finished product.</p>
@@ -136,30 +150,30 @@
                     <p class="testimonial">Friendly and professional staff, excellent technique and final results. I have been going there since they first opened 😊</p>
                     <p class="customer-name">- Deborah S.</p>
                 </div>
-            </section>
-        </div>
-        <footer>
-            <div class="footer-info">
-                <a href="https://www.facebook.com/pages/category/Nail-Salon/Town-Nails-Spa-141054785911981/"><i class="fa fa-facebook"></i></a>
-                <p>10 N Main St,<br>Bel Air, MD 21014</p>
-                <p>(410) 836-8868</p>
             </div>
-            <!-- <div id="map" class="footer-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3077.011431868092!2d-76.35213568388053!3d39.5367961166042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c7ddce760b1b1f%3A0x1266126dd9daba71!2sTown%20Nails%20%26%20Spa!5e0!3m2!1sen!2sus!4v1640105363065!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
-            </div> -->
-            <div class="footer-hours">
-                <ul>
-                    <li><span class="float-left">Monday:</span><span class="float-right">9AM-7PM</span></li><br>
-                    <li><span class="float-left">Tuesday:</span><span class="float-right">Closed</span></li><br>
-                    <li><span class="float-left">Wednesday:</span><span class="float-right">9AM-7PM</span></li><br>
-                    <li><span class="float-left">Thursday:</span><span class="float-right">9AM-7PM</span></li><br>
-                    <li><span class="float-left">Friday:</span><span class="float-right">9AM-7PM</span></li><br>
-                    <li><span class="float-left">Saturday:</span><span class="float-right">9AM-7PM</span></li><br>
-                    <li><span class="float-left">Sunday:</span><span class="float-right">11AM-4PM</span></li><br>
-                </ul>
+        </section>
+        <footer id="footer">
+            <div class="footer">
+                <div class="footer__cta">
+                    <a href="tel:4108368868" class="button"><i class="fas fa-phone"></i> BOOK APPOINTMENT NOW</a>
+                </div>
+                <div class="footer__information">
+                    <p>10 N Main St,<br>Bel Air, MD 21014</p>
+                    <p>(410) 836-8868</p>
+                </div>
+                <div class="footer__hours">
+                    <ul>
+                        <li><span class="float-left">Monday:</span><span class="float-right">9AM-7PM</span></li><br>
+                        <li><span class="float-left">Tuesday:</span><span class="float-right">Closed</span></li><br>
+                        <li><span class="float-left">Wednesday:</span><span class="float-right">9AM-7PM</span></li><br>
+                        <li><span class="float-left">Thursday:</span><span class="float-right">9AM-7PM</span></li><br>
+                        <li><span class="float-left">Friday:</span><span class="float-right">9AM-7PM</span></li><br>
+                        <li><span class="float-left">Saturday:</span><span class="float-right">9AM-7PM</span></li><br>
+                        <li><span class="float-left">Sunday:</span><span class="float-right">11AM-4PM</span></li><br>
+                    </ul>
+                </div>
+                <p class="copyright">&#169 Town Nails & Spa <script>document.write(new Date().getFullYear());</script></p>
             </div>
-            <a href="tel:4108368868" class="footer-cta"><i class="fas fa-phone"></i> CALL NOW</a>
-            <p class="copyright">&#169 Town Nails & Spa <script>document.write(new Date().getFullYear());</script></p>
         </footer>
     </main>
 </body>

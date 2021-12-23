@@ -1,0 +1,126 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a,
+a:visited,
+a:link {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: $bodyFont;
+    color: $dark;
+
+    &.noscroll {
+        overflow: hidden;
+    }
+}
+
+h1 {
+    font-family: $logoFont;
+}
+
+h2 {
+    margin-bottom: rem(30);
+    font-size: rem(36);
+    text-align: center;
+    flex: 0 0 100%;
+
+    @include breakpoint-up(medium) {
+        font-size: rem(38);
+    }
+
+    @include breakpoint-up(large) {
+        font-size: rem(40);
+    }
+}
+
+h3 {
+    font-size: rem(24);
+}
+
+h2,
+h3 {
+    font-family: $headingFont;
+}
+
+ul {
+    list-style-type: none;
+}
+
+// Helper Classes
+.button {
+    padding: 10px;
+    background-image: linear-gradient(to right, $accentOne, $accentTwo);
+    border: 2px solid transparent;
+    transform: scale(1);
+}
+
+.button:hover {
+    color: $dark !important;
+    transform: scale(1.02);
+    transition: ease-in-out 200ms;
+}
+
+// Floats for menu and hours
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+
+// Parallax Effects
+.parallax {
+    position: relative;
+    background-color: $light;
+
+}
+
+.parallax::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: url('../images/chairs.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.125;
+}
+
+.marble-parallax {
+    position: relative;
+    background-color: $light;
+}
+
+.marble-parallax::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: url('../images/marble-bg.jpg') no-repeat top;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.2;
+}

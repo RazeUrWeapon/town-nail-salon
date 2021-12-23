@@ -1,0 +1,57 @@
+#services {
+    padding: rem(30) rem(10) rem(50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .services {
+        @include breakpoint-up(medium) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, fit-content(20vh));
+            column-gap: rem(40);
+        }
+
+        @include breakpoint-up(large) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+
+            &__nails {
+                grid-column: 1 / 2;
+                grid-row: 1 / 3;
+            }
+
+            &__waxing {
+                grid-column: 2 / 3;
+                grid-row: 1 / 3;
+            }
+
+            &__skin {
+                grid-column: 3 / 4;
+                grid-row: 1 / 2;
+            }
+
+            &__massage {
+                grid-column: 3 / 4;
+                grid-row: 2 / 3;
+            }
+        }
+
+        h3 {
+            margin-bottom: rem(8);
+
+            @include breakpoint-up(large) {
+                font-size: rem(25);
+            }
+        }
+
+        ul {
+            margin-bottom: rem(20);
+
+            @include breakpoint-up(large) {
+                font-size: rem(17);
+            }
+        }
+    }
+}

@@ -1,21 +1,38 @@
-const mainMenu = document.querySelector('.mainMenu');
-const closeMenu = document.querySelector('.closeMenu');
-const openMenu = document.querySelector('.openMenu');
-const servicesButton = document.querySelector('.servicesButton');
-const hoursButton = document.querySelector('.hoursButton');
-const reviewsButton = document.querySelector('.reviewsButton');
+const body = document.querySelector('body');
+const hamburgerMenu = document.querySelector('#hamburgerButton');
+const header = document.querySelector('.header');
+const overlay = document.querySelector('.overlay');
+const fadeElements = document.querySelectorAll('.has-fade');
+const mobileMenu = document.querySelector('.header__menu');
 
-openMenu.addEventListener('click', show);
-closeMenu.addEventListener('click', close);
-servicesButton.addEventListener('click', close);
-hoursButton.addEventListener('click', close);
-reviewsButton.addEventListener('click', close);
-
-function show() {
-    mainMenu.style.display = 'flex';
-    mainMenu.style.top = '0px';
+function closeHamburgerMenu() {
+    body.classList.remove('noscroll');
+    header.classList.remove('open');
+    fadeElements.forEach( (e) => {
+        e.classList.remove('fade-in');
+        e.classList.add('fade-out');
+    });
 }
 
-function close() {
-    mainMenu.style.top = '-100%';
+function openMobileMenu() {
+    body.classList.add('noscroll');
+    header.classList.add('open');
+    fadeElements.forEach( (e) => {
+        e.classList.remove('fade-out');
+        e.classList.add('fade-in');
+    });
 }
+
+hamburgerMenu.addEventListener('click', () => {
+    if(header.classList.contains('open')) {
+        closeHamburgerMenu();
+    } else {
+        openMobileMenu();
+    }
+});
+
+// Removes mobile menu when link is pressed
+mobileMenu.addEventListener('click', () => {
+    if(header.classList.contains('open')) {closeHamburgerMenu()}
+});
+
