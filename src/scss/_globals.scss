@@ -92,13 +92,14 @@ ul {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background: url('../../images/chairs.jpg') no-repeat top;
+    background: url('../../images/chairs.jpg') no-repeat bottom;
     background-size: cover;
-    background-attachment: scroll;
+    background-attachment: local;
     opacity: 0.15;
 
     @include breakpoint-up(large) {
         background-size: cover;
+        background-attachment: fixed;
     }
 }
 
