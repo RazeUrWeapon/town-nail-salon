@@ -23,6 +23,7 @@ a:link {
 }
 
 body {
+    padding-top: rem(37);
     font-family: $bodyFont;
     color: $dark;
 
@@ -91,8 +92,8 @@ ul {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background: url('../../images/nail-polish-wall-2.jpg') no-repeat center bottom;
-    background-size: inherit;
+    background: url('../../images/nail-polish-wall-2.jpg') no-repeat bottom center;
+    background-size: cover;
     background-attachment: fixed;
     opacity: 0.15;
 
