@@ -91,7 +91,7 @@ ul {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background: url('../../images/chairs.jpg') no-repeat center center;
+    background: url('../../images/chairs.jpg') no-repeat center bottom;
     background-size: inherit;
     background-attachment: fixed;
     opacity: 0.15;
@@ -115,11 +115,7 @@ ul {
     bottom: 0px;
     left: 0px;
     background: url('../../images/marble-bg.jpg') no-repeat center center;
-    background-size: inherit;
+    background-size: cover;
     background-attachment: fixed;
     opacity: 0.3;
-
-    @include breakpoint-up(large) {
-        background-size: cover;
-    }
 }
