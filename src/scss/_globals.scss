@@ -77,7 +77,7 @@ ul {
 }
 
 
-// Parallax Effects
+// Parallax effects for desktop viewing, regular image for tablet/mobile
 .parallax {
     position: relative;
     background-color: $light;
@@ -91,35 +91,34 @@ ul {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background: url('../../images/chairs.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background: url('../../images/chairs.jpg') no-repeat center center;
+    background-size: contain;
     background-attachment: fixed;
     opacity: 0.15;
-
-    @include breakpoint-up(xlarge) {
-        background: url('../../images/chairs.jpg') no-repeat center;
+    
+    @include breakpoint-up(large) {
+        background-size: cover;
     }
 }
 
-.marble-parallax {
-    position: relative;
-    background-color: $light;
-    z-index: 1;
-}
 
-.marble-parallax::before {
-    content: '';
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background: url('../../images/marble-bg.jpg') no-repeat center center fixed;
-    background-size: cover;
-    background-attachment: fixed;
-    opacity: 0.3;
+@include breakpoint-up(large) {
+    .marble-parallax {
+        position: relative;
+        background-color: $light;
+        z-index: 1;
+    }
 
-    @include breakpoint-up(xlarge) {
-        background: url('../../images/marble-bg.jpg') no-repeat center;
+    .marble-parallax::before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background: url('../../images/marble-bg.jpg') no-repeat center center;
+        background-size: cover;
+        background-attachment: fixed;
+        opacity: 0.3;
     }
 }
