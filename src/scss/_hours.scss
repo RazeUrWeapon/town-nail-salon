@@ -34,10 +34,12 @@
         }
 
         &__benefits {
+            margin-left: rem(16);
             font-size: rem(18);
             list-style-type: disc;
 
             @include breakpoint-up(medium) {
+                margin-left: 0;
                 align-self: flex-start;
                 flex: 1 0 auto;
                 font-size: rem(20);
