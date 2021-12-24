@@ -92,9 +92,9 @@ ul {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background: url('../../images/nail-polish-wall-2.jpg') no-repeat bottom center;
+    background: url('../../images/nail-polish-wall-2.jpg') no-repeat top;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
     opacity: 0.15;
 
     @include breakpoint-up(large) {
