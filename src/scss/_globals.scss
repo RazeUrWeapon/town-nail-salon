@@ -23,7 +23,6 @@ a:link {
 }
 
 body {
-    padding-top: rem(37);
     font-family: $bodyFont;
     color: $dark;
 
@@ -92,13 +91,13 @@ ul {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background: url('../../images/chairs.jpg') no-repeat center;
+    background: url('../../images/chairs.jpg') no-repeat center center fixed;
     background-size: cover;
     background-attachment: fixed;
-    opacity: 0.3;
+    opacity: 0.15;
 
-    @include breakpoint-up(large) {
-        opactiy: 0.15;
+    @include breakpoint-up(xlarge) {
+        background: url('../../images/chairs.jpg') no-repeat center;
     }
 }
 
@@ -115,8 +114,12 @@ ul {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background: url('../../images/marble-bg.jpg') no-repeat top;
+    background: url('../../images/marble-bg.jpg') no-repeat center center fixed;
     background-size: cover;
     background-attachment: fixed;
     opacity: 0.3;
+
+    @include breakpoint-up(xlarge) {
+        background: url('../../images/marble-bg.jpg') no-repeat center;
+    }
 }
