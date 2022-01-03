@@ -77,7 +77,6 @@ ul {
     float: right;
 }
 
-
 // Parallax effects for desktop viewing, regular image for tablet/mobile
 .parallax {
     position: relative;
@@ -121,3 +120,16 @@ ul {
     background-attachment: fixed;
     opacity: 0.3;
 }
+
+// Fade on scroll effect
+.scroll-fade-in {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out,
+      transform 0.5s ease-in-out;
+  
+    &.is-hidden {
+      opacity: 0;
+    //   transform: scale(.98,.98);
+    }
+  }
