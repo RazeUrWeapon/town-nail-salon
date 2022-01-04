@@ -5,6 +5,8 @@ const overlay = document.querySelector('.overlay');
 const fadeElements = document.querySelectorAll('.has-fade');
 const mobileMenu = document.querySelector('.header__menu');
 const scrollFadeInElements = document.querySelectorAll('.scroll-fade-in');
+const faqQuestion = document.querySelectorAll('.faq__question');
+const faqCollapse = document.querySelectorAll('.faq__collapse');
 
 let windowHeight = window.innerHeight;
 
@@ -69,3 +71,10 @@ function scrollFade() {
   };
 
   scrollFade();
+
+  faqQuestion.forEach(question => {
+    question.addEventListener('click', () => {
+      question.classList.toggle('open');
+      question.nextElementSibling.classList.toggle('collapsed');
+    });
+  });
